@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32050D2E264618F9002C8E01 /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32050D2D264618F9002C8E01 /* NewEntryViewController.swift */; };
+		32BAB547263A433100D63152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BAB546263A433100D63152 /* AppDelegate.swift */; };
+		32BAB549263A433100D63152 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BAB548263A433100D63152 /* SceneDelegate.swift */; };
+		32BAB54B263A433100D63152 /* ThisWeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BAB54A263A433100D63152 /* ThisWeekViewController.swift */; };
+		32BAB54E263A433100D63152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BAB54C263A433100D63152 /* Main.storyboard */; };
+		32BAB550263A433300D63152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32BAB54F263A433300D63152 /* Assets.xcassets */; };
+		32BAB553263A433300D63152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BAB551263A433300D63152 /* LaunchScreen.storyboard */; };
+		32BAB55E263A433300D63152 /* SleepTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BAB55D263A433300D63152 /* SleepTrackerTests.swift */; };
+		32BAB569263A433400D63152 /* SleepTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BAB568263A433400D63152 /* SleepTrackerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		32BAB55A263A433300D63152 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32BAB53B263A433100D63152 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32BAB542263A433100D63152;
+			remoteInfo = SleepTracker;
+		};
+		32BAB565263A433300D63152 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32BAB53B263A433100D63152 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32BAB542263A433100D63152;
+			remoteInfo = SleepTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32050D2D264618F9002C8E01 /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
+		32BAB543263A433100D63152 /* SleepTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32BAB546263A433100D63152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		32BAB548263A433100D63152 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		32BAB54A263A433100D63152 /* ThisWeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisWeekViewController.swift; sourceTree = "<group>"; };
+		32BAB54D263A433100D63152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		32BAB54F263A433300D63152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		32BAB552263A433300D63152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		32BAB554263A433300D63152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32BAB559263A433300D63152 /* SleepTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleepTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32BAB55D263A433300D63152 /* SleepTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTrackerTests.swift; sourceTree = "<group>"; };
+		32BAB55F263A433300D63152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32BAB564263A433300D63152 /* SleepTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleepTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32BAB568263A433400D63152 /* SleepTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTrackerUITests.swift; sourceTree = "<group>"; };
+		32BAB56A263A433400D63152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32BAB540263A433100D63152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32BAB556263A433300D63152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32BAB561263A433300D63152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32BAB53A263A433100D63152 = {
+			isa = PBXGroup;
+			children = (
+				32BAB545263A433100D63152 /* SleepTracker */,
+				32BAB55C263A433300D63152 /* SleepTrackerTests */,
+				32BAB567263A433300D63152 /* SleepTrackerUITests */,
+				32BAB544263A433100D63152 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		32BAB544263A433100D63152 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32BAB543263A433100D63152 /* SleepTracker.app */,
+				32BAB559263A433300D63152 /* SleepTrackerTests.xctest */,
+				32BAB564263A433300D63152 /* SleepTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32BAB545263A433100D63152 /* SleepTracker */ = {
+			isa = PBXGroup;
+			children = (
+				32BAB546263A433100D63152 /* AppDelegate.swift */,
+				32BAB548263A433100D63152 /* SceneDelegate.swift */,
+				32BAB54A263A433100D63152 /* ThisWeekViewController.swift */,
+				32BAB54C263A433100D63152 /* Main.storyboard */,
+				32050D2D264618F9002C8E01 /* NewEntryViewController.swift */,
+				32BAB54F263A433300D63152 /* Assets.xcassets */,
+				32BAB551263A433300D63152 /* LaunchScreen.storyboard */,
+				32BAB554263A433300D63152 /* Info.plist */,
+			);
+			path = SleepTracker;
+			sourceTree = "<group>";
+		};
+		32BAB55C263A433300D63152 /* SleepTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				32BAB55D263A433300D63152 /* SleepTrackerTests.swift */,
+				32BAB55F263A433300D63152 /* Info.plist */,
+			);
+			path = SleepTrackerTests;
+			sourceTree = "<group>";
+		};
+		32BAB567263A433300D63152 /* SleepTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				32BAB568263A433400D63152 /* SleepTrackerUITests.swift */,
+				32BAB56A263A433400D63152 /* Info.plist */,
+			);
+			path = SleepTrackerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		32BAB542263A433100D63152 /* SleepTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32BAB56D263A433400D63152 /* Build configuration list for PBXNativeTarget "SleepTracker" */;
+			buildPhases = (
+				32BAB53F263A433100D63152 /* Sources */,
+				32BAB540263A433100D63152 /* Frameworks */,
+				32BAB541263A433100D63152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SleepTracker;
+			productName = SleepTracker;
+			productReference = 32BAB543263A433100D63152 /* SleepTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		32BAB558263A433300D63152 /* SleepTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32BAB570263A433400D63152 /* Build configuration list for PBXNativeTarget "SleepTrackerTests" */;
+			buildPhases = (
+				32BAB555263A433300D63152 /* Sources */,
+				32BAB556263A433300D63152 /* Frameworks */,
+				32BAB557263A433300D63152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32BAB55B263A433300D63152 /* PBXTargetDependency */,
+			);
+			name = SleepTrackerTests;
+			productName = SleepTrackerTests;
+			productReference = 32BAB559263A433300D63152 /* SleepTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		32BAB563263A433300D63152 /* SleepTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32BAB573263A433400D63152 /* Build configuration list for PBXNativeTarget "SleepTrackerUITests" */;
+			buildPhases = (
+				32BAB560263A433300D63152 /* Sources */,
+				32BAB561263A433300D63152 /* Frameworks */,
+				32BAB562263A433300D63152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32BAB566263A433300D63152 /* PBXTargetDependency */,
+			);
+			name = SleepTrackerUITests;
+			productName = SleepTrackerUITests;
+			productReference = 32BAB564263A433300D63152 /* SleepTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32BAB53B263A433100D63152 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					32BAB542263A433100D63152 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					32BAB558263A433300D63152 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 32BAB542263A433100D63152;
+					};
+					32BAB563263A433300D63152 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 32BAB542263A433100D63152;
+					};
+				};
+			};
+			buildConfigurationList = 32BAB53E263A433100D63152 /* Build configuration list for PBXProject "SleepTracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 32BAB53A263A433100D63152;
+			productRefGroup = 32BAB544263A433100D63152 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32BAB542263A433100D63152 /* SleepTracker */,
+				32BAB558263A433300D63152 /* SleepTrackerTests */,
+				32BAB563263A433300D63152 /* SleepTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32BAB541263A433100D63152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32BAB553263A433300D63152 /* LaunchScreen.storyboard in Resources */,
+				32BAB550263A433300D63152 /* Assets.xcassets in Resources */,
+				32BAB54E263A433100D63152 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32BAB557263A433300D63152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32BAB562263A433300D63152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32BAB53F263A433100D63152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32BAB54B263A433100D63152 /* ThisWeekViewController.swift in Sources */,
+				32BAB547263A433100D63152 /* AppDelegate.swift in Sources */,
+				32050D2E264618F9002C8E01 /* NewEntryViewController.swift in Sources */,
+				32BAB549263A433100D63152 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32BAB555263A433300D63152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32BAB55E263A433300D63152 /* SleepTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32BAB560263A433300D63152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32BAB569263A433400D63152 /* SleepTrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		32BAB55B263A433300D63152 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32BAB542263A433100D63152 /* SleepTracker */;
+			targetProxy = 32BAB55A263A433300D63152 /* PBXContainerItemProxy */;
+		};
+		32BAB566263A433300D63152 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32BAB542263A433100D63152 /* SleepTracker */;
+			targetProxy = 32BAB565263A433300D63152 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		32BAB54C263A433100D63152 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32BAB54D263A433100D63152 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		32BAB551263A433300D63152 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32BAB552263A433300D63152 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		32BAB56B263A433400D63152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		32BAB56C263A433400D63152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		32BAB56E263A433400D63152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q274FWZRLL;
+				INFOPLIST_FILE = SleepTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SleepTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		32BAB56F263A433400D63152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q274FWZRLL;
+				INFOPLIST_FILE = SleepTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SleepTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		32BAB571263A433400D63152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q274FWZRLL;
+				INFOPLIST_FILE = SleepTrackerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SleepTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SleepTracker.app/SleepTracker";
+			};
+			name = Debug;
+		};
+		32BAB572263A433400D63152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q274FWZRLL;
+				INFOPLIST_FILE = SleepTrackerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SleepTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SleepTracker.app/SleepTracker";
+			};
+			name = Release;
+		};
+		32BAB574263A433400D63152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q274FWZRLL;
+				INFOPLIST_FILE = SleepTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SleepTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SleepTracker;
+			};
+			name = Debug;
+		};
+		32BAB575263A433400D63152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q274FWZRLL;
+				INFOPLIST_FILE = SleepTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SleepTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SleepTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32BAB53E263A433100D63152 /* Build configuration list for PBXProject "SleepTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32BAB56B263A433400D63152 /* Debug */,
+				32BAB56C263A433400D63152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32BAB56D263A433400D63152 /* Build configuration list for PBXNativeTarget "SleepTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32BAB56E263A433400D63152 /* Debug */,
+				32BAB56F263A433400D63152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32BAB570263A433400D63152 /* Build configuration list for PBXNativeTarget "SleepTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32BAB571263A433400D63152 /* Debug */,
+				32BAB572263A433400D63152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32BAB573263A433400D63152 /* Build configuration list for PBXNativeTarget "SleepTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32BAB574263A433400D63152 /* Debug */,
+				32BAB575263A433400D63152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 32BAB53B263A433100D63152 /* Project object */;
+}
