@@ -9,7 +9,7 @@ import UIKit
 
 class NewEntryViewController: UITableViewController {
     
-    var totalSleepQualityPercentage = 0
+    var totalSleepQualityPercentage: Int?
     
     var moods = ["very good", "energetic", "normal", "sad", "drowsy"]
     var moodSelected: String = "none"
@@ -154,7 +154,7 @@ class NewEntryViewController: UITableViewController {
         totalSleepQualityPercentage = Int(add * 10)
         
         let destVC = segue.destination as! ThisWeekViewController
-        destVC.totalSleep = totalSleepQualityPercentage
+        destVC.totalSleep = totalSleepQualityPercentage!
         
         //temp!
         let formatter = DateFormatter()
@@ -162,7 +162,7 @@ class NewEntryViewController: UITableViewController {
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
         let dateString = formatter.string(from: logDate.date)
-        print(dateString)
+        destVC.totalDate = dateString
     }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

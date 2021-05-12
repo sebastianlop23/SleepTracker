@@ -12,26 +12,29 @@
         <scene sceneID="RZj-BL-4YR">
             <objects>
                 <tableViewController id="4S5-3j-BmQ" customClass="ThisWeekViewController" customModule="SleepTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YKo-eC-Xre">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YKo-eC-Xre">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SleepItem" rowHeight="65" id="mGO-cG-kjI" customClass="CustomCell" customModule="SleepTracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="65"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SleepItem" id="mGO-cG-kjI" customClass="CustomCell" customModule="SleepTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mGO-cG-kjI" id="xq3-vk-T1Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r19-3H-73x">
-                                            <rect key="frame" x="40" y="17" width="55" height="28"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r19-3H-73x">
+                                            <rect key="frame" x="40" y="11" width="124" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="124" id="ZE0-bH-4wc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsS-pc-m9m">
-                                            <rect key="frame" x="118" y="22" width="38" height="18"/>
+                                            <rect key="frame" x="188" y="21" width="38" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,7 +42,9 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="r19-3H-73x" firstAttribute="leading" secondItem="xq3-vk-T1Z" secondAttribute="leadingMargin" constant="20" id="eTv-ZO-MhA"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="r19-3H-73x" secondAttribute="bottom" id="Fog-zo-DdA"/>
+                                        <constraint firstItem="r19-3H-73x" firstAttribute="top" secondItem="xq3-vk-T1Z" secondAttribute="topMargin" id="GXP-Xd-6cS"/>
+                                        <constraint firstItem="r19-3H-73x" firstAttribute="leading" secondItem="xq3-vk-T1Z" secondAttribute="leadingMargin" constant="20" id="txJ-mA-VMh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

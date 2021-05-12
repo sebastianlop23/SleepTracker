@@ -11,9 +11,11 @@ class ThisWeekViewController: UITableViewController {
     
     let vc = NewEntryViewController()
     var totalSleep = 0
+    var totalDate = ""
     
+    var cellDate: [String] = []
     var cellPercentage: [Int] = []
-    let testArray = [3, 4, 2, 6, 9, 12, 56, 3]
+    //let testArray = [3, 4, 2, 6, 9, 12, 56, 3]
     
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue){
         print("cancelled")
@@ -22,6 +24,10 @@ class ThisWeekViewController: UITableViewController {
     
     @IBAction func saveAndUnwind(_ sender: UIStoryboardSegue){
         cellPercentage.append(totalSleep)
+        cellDate.append(totalDate)
+        
+        self.tableView.reloadData()
+        
         //print(totalSleep, "%")
         
         //update cell with new append
@@ -43,8 +49,11 @@ class ThisWeekViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SleepItem", for: indexPath) as! CustomCell
         let friend = cellPercentage[indexPath.row]
-        cell.percentageLabel.text = String(friend)
+        let finalSend1 = String(friend) + "%"
         
+        let finalSend2 = cellDate[indexPath.row]
+        cell.percentageLabel.text = finalSend1
+        cell.dateLabel.text = finalSend2
     
         return cell //just to display a cell
     }
