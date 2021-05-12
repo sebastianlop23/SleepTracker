@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,24 +17,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SleepItem" id="mGO-cG-kjI">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SleepItem" rowHeight="65" id="mGO-cG-kjI" customClass="CustomCell" customModule="SleepTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mGO-cG-kjI" id="xq3-vk-T1Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hx6-ql-BFs">
-                                            <rect key="frame" x="20" y="11" width="211" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r19-3H-73x">
+                                            <rect key="frame" x="40" y="17" width="55" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsS-pc-m9m">
+                                            <rect key="frame" x="118" y="22" width="38" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="r19-3H-73x" firstAttribute="leading" secondItem="xq3-vk-T1Z" secondAttribute="leadingMargin" constant="20" id="eTv-ZO-MhA"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="33f-0S-ajQ" kind="show" id="HUQ-2w-wM3"/>
+                                    <outlet property="dateLabel" destination="r19-3H-73x" id="OZz-78-9da"/>
+                                    <outlet property="percentageLabel" destination="VsS-pc-m9m" id="9ma-XY-Qke"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -43,6 +54,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Good morning" largeTitleDisplayMode="always" id="BUl-k5-9er">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="info.circle" catalog="system" id="XDg-f6-le4">
+                            <connections>
+                                <segue destination="m0i-Xp-PM6" kind="show" id="taS-Se-1uM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FQF-gc-GiP">
                             <connections>
                                 <segue destination="pJ9-gi-QAm" kind="show" identifier="addNight" id="177-GS-nj6"/>
@@ -53,6 +69,136 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0X-V5-srQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2247.826086956522" y="444.64285714285711"/>
+        </scene>
+        <!--App Information hub-->
+        <scene sceneID="39Y-RW-bM2">
+            <objects>
+                <viewController id="m0i-Xp-PM6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WcG-NT-G4t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAx-kL-aSN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="1312"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63J-d9-TBJ" userLabel=" ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Omy-b8-pd6">
+                                                <rect key="frame" x="12" y="8" width="390" height="1272"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How did I calculate sleep quality?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nS8-Af-JIV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRx-dY-ngY">
+                                                        <rect key="frame" x="0.0" y="41" width="390" height="264"/>
+                                                        <string key="text">By using these variables: - Hours of sleep - Mood after waking up - Whether you snored or not - Time taken to fall asleep - Amount of wake times through the night  With sleep research in consideration, I gave weights to each determinant of sleep quality. After giving a percentage of importance to each variable (e.g. 10%), I multiplied the score by importance. Then added all results and multiplied again by highest score which is 10.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why is this app accurate?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCG-Dq-ovf">
+                                                        <rect key="frame" x="0.0" y="317" width="390" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5b-2F-ePm">
+                                                        <rect key="frame" x="0.0" y="358" width="390" height="142.5"/>
+                                                        <string key="text">This app is accurate because of the broad scientific research used in it's foundations. Each weight of importance to the sleep quality formula was largely driven by at least 4 research articles. While this is an accurate sleep quality calculator, we have not yet fully determined how sleep quality can be measured, only estimates.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reseach Findings on Sleep Quality" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umD-4x-9zy">
+                                                        <rect key="frame" x="0.0" y="512.5" width="390" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szg-NC-KYK">
+                                                        <rect key="frame" x="0.0" y="554.5" width="390" height="122"/>
+                                                        <string key="text">- In the Merck Manual, a reference book for physicians and pharmacists, Richard J. Schwab discovered that snoring results from fluttering of soft tissues in the throat, when the fluttering becomes intense, it can wake us up through the night, therefore interrupting deep sleep.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXQ-Ty-7qH">
+                                                        <rect key="frame" x="0.0" y="688.5" width="390" height="81.5"/>
+                                                        <string key="text">- In a study by David L. Reed et al., it was proven that time in bed without sleeping affects the quality of it. People who spend 85% of time in bed without sleeping have poor sleep efficiency.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toQ-nn-CbA">
+                                                        <rect key="frame" x="0.0" y="782" width="390" height="142.5"/>
+                                                        <string key="text">- While in a study by Sofia Triantafillou et al. claimed that sleep quality has a big impact on mood rather than viceversa, wake mood still has a significant impact on sleep quality. Whether someone feels sad or happy after sleep, it has an important effect on sleep quality of about 40% on the equation.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyZ-hW-cRl">
+                                                        <rect key="frame" x="0.0" y="936.5" width="390" height="142.5"/>
+                                                        <string key="text">- In a study by Akifumi Kishi et al., scientists indicated that people with disturbed sleep are at higher risk of not sleeping enough hours. It also claims that interrupted sleep can be a symptom of imnsonia. Interrupted sleep can impact daytime sleepiness, school or work performance, and risk of accidents while driving.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why is this app important?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vam-v1-iCS">
+                                                        <rect key="frame" x="0.0" y="1091" width="390" height="26.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXn-5X-tpT">
+                                                        <rect key="frame" x="0.0" y="1129.5" width="390" height="142.5"/>
+                                                        <string key="text">While pulling allnighters can be effective at getting things done, it can also harm us in the long term. Our bodies need rest from all the processes done throughout the day, so it is important to get good sleep. I believe that with good sleep and knowledge on the importance of it can change our lives in a deep way.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="pCG-Dq-ovf" firstAttribute="top" secondItem="LRx-dY-ngY" secondAttribute="bottom" constant="20" id="gn9-t4-oqg"/>
+                                                    <constraint firstAttribute="width" constant="390" id="m5a-Pt-CNg"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Omy-b8-pd6" secondAttribute="trailing" constant="12" id="1J2-4O-zhm"/>
+                                            <constraint firstItem="Omy-b8-pd6" firstAttribute="leading" secondItem="63J-d9-TBJ" secondAttribute="leading" constant="12" id="e0w-jc-Tis"/>
+                                            <constraint firstItem="Omy-b8-pd6" firstAttribute="top" secondItem="63J-d9-TBJ" secondAttribute="top" constant="8" id="kMd-Fe-n6E"/>
+                                            <constraint firstAttribute="height" constant="1400" id="ltk-Jc-VWZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="63J-d9-TBJ" firstAttribute="top" secondItem="DAx-kL-aSN" secondAttribute="top" id="00V-ed-lV2"/>
+                                    <constraint firstAttribute="bottom" secondItem="63J-d9-TBJ" secondAttribute="bottom" id="7X3-gY-MSy"/>
+                                    <constraint firstItem="63J-d9-TBJ" firstAttribute="leading" secondItem="DAx-kL-aSN" secondAttribute="leading" id="GnH-9l-HhL"/>
+                                    <constraint firstAttribute="trailing" secondItem="63J-d9-TBJ" secondAttribute="trailing" id="Lfj-Qr-eAE"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fub-fb-iWb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DAx-kL-aSN" secondAttribute="bottom" id="0M4-0l-snC"/>
+                            <constraint firstItem="DAx-kL-aSN" firstAttribute="top" secondItem="fub-fb-iWb" secondAttribute="top" id="EnC-ek-qyD"/>
+                            <constraint firstItem="DAx-kL-aSN" firstAttribute="leading" secondItem="fub-fb-iWb" secondAttribute="leading" id="Ig2-UZ-B56"/>
+                            <constraint firstItem="DAx-kL-aSN" firstAttribute="trailing" secondItem="fub-fb-iWb" secondAttribute="trailing" id="n5b-e1-TPK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="App Information hub" largeTitleDisplayMode="never" id="5xZ-C6-RxP"/>
+                    <size key="freeformSize" width="414" height="1400"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pz1-ZR-AGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3315.9420289855075" y="-613.39285714285711"/>
         </scene>
         <!--Add Your Details-->
         <scene sceneID="YyO-Fw-U2X">
@@ -173,6 +319,27 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="96" id="g0Q-vz-vCb">
+                                        <rect key="frame" x="0.0" y="336" width="414" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g0Q-vz-vCb" id="oyY-YZ-BP8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="please confirm today's date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTb-oI-T6Z">
+                                                    <rect key="frame" x="20" y="38" width="201" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="p9u-xN-w5Q">
+                                                    <rect key="frame" x="275" y="0.0" width="119" height="96"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                </datePicker>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -182,7 +349,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Let's add another one.." id="UO6-JI-eMV">
+                    <navigationItem key="navigationItem" title="Let's get the day started.." id="UO6-JI-eMV">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="U9A-aW-PCi">
                             <connections>
                                 <segue destination="vbx-bF-Sz7" kind="unwind" unwindAction="unwindWithSegue:" id="kqx-HZ-ykQ"/>
@@ -190,13 +357,14 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="tOw-66-9Rd">
                             <connections>
-                                <action selector="saveCalc:" destination="pJ9-gi-QAm" id="nhf-v6-nQC"/>
+                                <segue destination="vbx-bF-Sz7" kind="unwind" unwindAction="saveAndUnwind:" id="dER-6f-PXy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="logDate" destination="p9u-xN-w5Q" id="1uO-lf-fme"/>
                         <outlet property="longingPickerView" destination="Tts-R0-WN4" id="xuM-eR-dfp"/>
                         <outlet property="midnightWakes" destination="s6V-1v-y1u" id="tcN-e2-Wl7"/>
                         <outlet property="moodPickerView" destination="vrR-o2-TZm" id="kbA-Qy-WYR"/>
@@ -207,7 +375,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xzy-9o-QE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="vbx-bF-Sz7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3316" y="137"/>
+            <point key="canvasLocation" x="3315.9420289855075" y="334.82142857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O3t-yh-S8W">
@@ -226,57 +394,9 @@
             </objects>
             <point key="canvasLocation" x="1297" y="443"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="PuK-4o-17N">
-            <objects>
-                <tableViewController id="33f-0S-ajQ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="gVL-9L-KOx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="Dreams Record" id="pMr-B7-P93">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="425" id="wsn-2g-bCF">
-                                        <rect key="frame" x="0.0" y="49.5" width="414" height="425"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wsn-2g-bCF" id="uZ0-Ul-AmD">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="425"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YeP-9w-wak">
-                                                    <rect key="frame" x="20" y="11" width="374" height="403"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                    <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="33f-0S-ajQ" id="5Le-JI-Bt1"/>
-                            <outlet property="delegate" destination="33f-0S-ajQ" id="8QJ-HC-Fkb"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="L4B-2c-xi4">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="hId-Af-hws"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qUL-hF-VVR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3287" y="879"/>
-        </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

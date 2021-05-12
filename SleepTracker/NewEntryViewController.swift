@@ -9,6 +9,8 @@ import UIKit
 
 class NewEntryViewController: UITableViewController {
     
+    var totalSleepQualityPercentage = 0
+    
     var moods = ["very good", "energetic", "normal", "sad", "drowsy"]
     var moodSelected: String = "none"
     let longings = ["no delay", "15 mins", "30 mins", "1hr", "2 hrs or more"]
@@ -21,7 +23,8 @@ class NewEntryViewController: UITableViewController {
     @IBOutlet weak var midnightWakes: UITextField!
     @IBOutlet weak var longingPickerView: UIPickerView!
     
-
+    
+    @IBOutlet weak var logDate: UIDatePicker!
     
     
     override func viewDidLoad() {
@@ -40,15 +43,19 @@ class NewEntryViewController: UITableViewController {
         longingPickerView.delegate = self
         longingPickerView.dataSource = self
         
+        
+        
     }
 
     // MARK: - Table view data source
     
     
-    @IBAction func saveCalc(_ sender: Any) {
-        let add = calcHoursScore() + calcSnoringScore() + calcMoodScore() + calcLongingScore() //have to check another one yet
-        print(Int(add * 10), "%")// will delete and send result to weekly view controller
+    @IBAction func saveCalc(_ sender: Any){
+        //let add = calcHoursScore() + calcSnoringScore() + calcMoodScore() + calcLongingScore() + calcMidwakeScore()
+        //totalSleepQualityPercentage = Int(add * 10)
+        
     }
+    
     
     func calcLongingScore() -> Double{
         var totalLonging: Int
@@ -65,11 +72,11 @@ class NewEntryViewController: UITableViewController {
         }else{
             totalLonging = 0
         }
-        return Double(totalLonging) * 0.3
+        return Double(totalLonging) * 0.2
     }
  
     
-    func calcMidwakeScore() -> Int{
+    func calcMidwakeScore() -> Double{
         let wakeAmount: String = midnightWakes.text!
         let conve = Int(wakeAmount) ?? 0
         var totalMidwakeScore: Int
@@ -81,7 +88,7 @@ class NewEntryViewController: UITableViewController {
         }else{
             totalMidwakeScore = 3
         }
-        return totalMidwakeScore// pls delete
+        return Double(totalMidwakeScore) * 0.2// pls delete
     }
     
     func calcMoodScore() -> Double{
@@ -99,7 +106,7 @@ class NewEntryViewController: UITableViewController {
         }else{
             totalMood = 0
         }
-        return Double(totalMood) * 0.5
+        return Double(totalMood) * 0.4
     }
     func calcSnoringScore() -> Double{
         var totalSnoring: Int
@@ -139,9 +146,24 @@ class NewEntryViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 6
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let add = calcHoursScore() + calcSnoringScore() + calcMoodScore() + calcLongingScore() + calcMidwakeScore()
+        totalSleepQualityPercentage = Int(add * 10)
+        
+        let destVC = segue.destination as! ThisWeekViewController
+        destVC.totalSleep = totalSleepQualityPercentage
+        
+        //temp!
+        let formatter = DateFormatter()
+        formatter.calendar = logDate.calendar
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        let dateString = formatter.string(from: logDate.date)
+        print(dateString)
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

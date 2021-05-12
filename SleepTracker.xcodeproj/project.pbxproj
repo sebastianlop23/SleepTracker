@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32050D2E264618F9002C8E01 /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32050D2D264618F9002C8E01 /* NewEntryViewController.swift */; };
+		3289D27F264B787D008769E6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3289D27E264B787D008769E6 /* CustomCell.swift */; };
 		32BAB547263A433100D63152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BAB546263A433100D63152 /* AppDelegate.swift */; };
 		32BAB549263A433100D63152 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BAB548263A433100D63152 /* SceneDelegate.swift */; };
 		32BAB54B263A433100D63152 /* ThisWeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BAB54A263A433100D63152 /* ThisWeekViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		32050D2D264618F9002C8E01 /* NewEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
+		3289D27E264B787D008769E6 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		32BAB543263A433100D63152 /* SleepTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BAB546263A433100D63152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32BAB548263A433100D63152 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				32BAB546263A433100D63152 /* AppDelegate.swift */,
 				32BAB548263A433100D63152 /* SceneDelegate.swift */,
 				32BAB54A263A433100D63152 /* ThisWeekViewController.swift */,
+				3289D27E264B787D008769E6 /* CustomCell.swift */,
 				32BAB54C263A433100D63152 /* Main.storyboard */,
 				32050D2D264618F9002C8E01 /* NewEntryViewController.swift */,
 				32BAB54F263A433300D63152 /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			files = (
 				32BAB54B263A433100D63152 /* ThisWeekViewController.swift in Sources */,
 				32BAB547263A433100D63152 /* AppDelegate.swift in Sources */,
+				3289D27F264B787D008769E6 /* CustomCell.swift in Sources */,
 				32050D2E264618F9002C8E01 /* NewEntryViewController.swift in Sources */,
 				32BAB549263A433100D63152 /* SceneDelegate.swift in Sources */,
 			);
