@@ -12,10 +12,11 @@ class ThisWeekViewController: UITableViewController {
     let vc = NewEntryViewController()
     var totalSleep = 0
     var totalDate = ""
+    var totalEmoji = ""
     
     var cellDate: [String] = []
     var cellPercentage: [Int] = []
-    //let testArray = [3, 4, 2, 6, 9, 12, 56, 3]
+    var cellEmoji: [String] = []
     
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue){
         print("cancelled")
@@ -25,6 +26,28 @@ class ThisWeekViewController: UITableViewController {
     @IBAction func saveAndUnwind(_ sender: UIStoryboardSegue){
         cellPercentage.append(totalSleep)
         cellDate.append(totalDate)
+        if 90...100 ~= totalSleep{
+            totalEmoji = "🤩"
+        }else if 80...90 ~= totalSleep{
+            totalEmoji = "😄"
+        }else if 70...80 ~= totalSleep{
+            totalEmoji = "☺️"
+        }else if 60...70 ~= totalSleep{
+            totalEmoji = "😌"
+        }else if 50...60 ~= totalSleep{
+            totalEmoji = "🙂"
+        }else if 40...50 ~= totalSleep{
+            totalEmoji = "😐"
+        }else if 30...40 ~= totalSleep{
+            totalEmoji = "😕"
+        }else if 20...30 ~= totalSleep{
+            totalEmoji = "🙁"
+        }else if 10...20 ~= totalSleep{
+            totalEmoji = "😞"
+        }else{
+            totalEmoji = "🥱"
+        }
+        cellEmoji.append(totalEmoji)
         
         self.tableView.reloadData()
         
@@ -50,11 +73,12 @@ class ThisWeekViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SleepItem", for: indexPath) as! CustomCell
         let friend = cellPercentage[indexPath.row]
         let finalSend1 = String(friend) + "%"
-        
         let finalSend2 = cellDate[indexPath.row]
+        let finalSend3 = cellEmoji[indexPath.row]
+        
         cell.percentageLabel.text = finalSend1
         cell.dateLabel.text = finalSend2
-    
+        cell.emojiLabel.text = finalSend3
         return cell //just to display a cell
     }
 

@@ -11,6 +11,7 @@ class CustomCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var percentageLabel: UILabel!
+    @IBOutlet weak var emojiLabel: UILabel!
     /*
     override func awakeFromNib() {
         super.awakeFromNib()
