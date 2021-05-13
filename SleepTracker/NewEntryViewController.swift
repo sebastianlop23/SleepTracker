@@ -50,11 +50,6 @@ class NewEntryViewController: UITableViewController {
     // MARK: - Table view data source
     
     
-    @IBAction func saveCalc(_ sender: Any){
-        //let add = calcHoursScore() + calcSnoringScore() + calcMoodScore() + calcLongingScore() + calcMidwakeScore()
-        //totalSleepQualityPercentage = Int(add * 10)
-        
-    }
     
     
     func calcLongingScore() -> Double{
